@@ -1,0 +1,15 @@
+<template name="navbar">
+	<div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+        <a class="brand" href="{{pathFor 'home'}}">TibAstro</a>
+        <ul class="nav">
+				  <li class="{{ activeIfTemplateIs 'home' }}">
+				    <a href="{{ pathFor 'home'}}">Home</a>
+				  </li>
+				  <li class="{{ activeIfTemplateIs 'calendar' }}">
+				    <a href="{{pathFor 'calendar'}}">Calendar</a>
+				  </li>
+        </ul>
+    </div>
+	</div>
+</template>
