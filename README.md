@@ -4,7 +4,7 @@ A Meteor.js app to display [tibastro](https://github.com/eroux/tibastro) generat
 
 **Live site :** https://tibastro.temp.projets2coeur.fr/
 
-### Deployment
+### Web deployment (server + web client)
 
 Just run `mup deploy`.
 
@@ -17,7 +17,7 @@ meteor build .build --debug --server https://tibastro.temp.projets2coeur.fr
 scp .build/android/unaligned.apk aquaray:/mnt/data_web/projets2coeur/current/public/tibastro.apk
 ```
 
-Download `http://projets2coeur.fr/tibastro.apk` the android device, install it, run it, enjoy !
+Download `http://projets2coeur.fr/tibastro.apk` on the android device, install it, run it, enjoy !
 
 #### Release
 
