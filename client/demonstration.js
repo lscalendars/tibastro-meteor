@@ -1,4 +1,4 @@
-CalEvents = new Meteor.Collection('calevents');
+Events = new Ground.Collection('events');
 
 Router.map(function () {
   this.route('home', {
@@ -26,7 +26,7 @@ if (Meteor.isClient) {
       // Function providing events reactive computation for fullcalendar plugin
       events: function(start, end, timezone, callback) {
 	        var events = [];
-	      calEvents = CalEvents.find();
+	      calEvents = Events.find();
 	      calEvents.forEach(function(evt){
 	        events.push({id:evt._id,title:evt.title,start:evt.start,end:evt.end});
 	      })
