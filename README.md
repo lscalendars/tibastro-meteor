@@ -8,7 +8,9 @@ A Meteor.js app to display [tibastro](https://github.com/eroux/tibastro) generat
 
 Just run `mup deploy`.
 
-### Android testing deployment
+### Android deployment
+
+#### Testing
 
 ```
 meteor build .build --debug --server https://tibastro.temp.projets2coeur.fr
@@ -16,3 +18,17 @@ scp .build/android/unaligned.apk aquaray:/mnt/data_web/projets2coeur/current/pub
 ```
 
 Download `http://projets2coeur.fr/tibastro.apk` the android device, install it, run it, enjoy !
+
+#### Release
+
+TODO
+
+### iOS deployment
+
+#### Testing
+
+TODO
+
+#### Release
+
+TODO
