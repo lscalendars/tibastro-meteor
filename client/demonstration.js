@@ -24,17 +24,31 @@ if (Meteor.isClient) {
       lang: 'fr',
       // Function providing events reactive computation for fullcalendar plugin
       events: function(start, end, timezone, callback) {
-	        var events = [];
+	      var events = [];
 	      calEvents = Events.find();
 	      calEvents.forEach(function(evt){
-	        events.push({id:evt._id,title:evt.title,start:evt.start,end:evt.end});
+	        events.push({
+            id:      evt._id,
+            title:   evt.title,
+            start:   evt.start,
+            end:     evt.end,
+            content: evt.content,
+            haircut: evt.haircut
+          });
 	      })
 	      callback(events);
+      },
+      eventRender: function(event, element) {
+        div = $("<div>")
+        div.html(event.content);
+        if (!event.haircut) div.append('<img src="img/no-hair-cut.png">');
+        return div;
       },
       // Optional: id of the calendar
       id: "calendar1",
       // Optional: Additional classes to apply to the calendar
       addedClasses: "col-md-8",
+
       // Optional: Additional functions to apply after each reactive events computation
       autoruns: [
         function () {
