@@ -12,3 +12,4 @@ bootstrap
 gquemart:meteor-reactive-fullcalendar
 ground:db
 autoupdate
+reload
